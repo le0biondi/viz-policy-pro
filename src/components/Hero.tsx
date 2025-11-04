@@ -2,11 +2,6 @@ import { Zap, TrendingDown, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const scrollToSection = () => {
-    const section = document.getElementById('tarifa-social');
-    section?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-primary">
       {/* Background Pattern */}
@@ -36,15 +31,31 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               size="lg" 
-              onClick={scrollToSection}
+              onClick={() => document.getElementById('teoria-mudanca')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Explorar Dados
+              Teoria da Mudança
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('teoria-programa')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-transparent border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm"
+            >
+              Teoria do Programa
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              onClick={() => document.getElementById('abrangencia')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-transparent border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm"
+            >
+              Abrangência
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              onClick={() => document.getElementById('methodology')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-transparent border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm"
             >
               Metodologia
