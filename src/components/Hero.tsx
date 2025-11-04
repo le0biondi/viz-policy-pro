@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const scrollToSection = () => {
-    const section = document.getElementById('luz-do-povo');
+    const section = document.getElementById('tarifa-social');
     section?.scrollIntoView({ behavior: 'smooth' });
   };
 
