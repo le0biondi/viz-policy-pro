@@ -1,7 +1,12 @@
-import { BarChart3, TrendingDown, Users } from "lucide-react";
+import { Zap, TrendingDown, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToSection = () => {
+    const section = document.getElementById('luz-do-povo');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-primary">
       {/* Background Pattern */}
@@ -11,26 +16,27 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-            <BarChart3 className="w-4 h-4 text-white" />
-            <span className="text-sm font-medium text-white">Plataforma de Análise de Políticas Públicas</span>
+            <Lightbulb className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-white">Tarifa Social de Energia Elétrica</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Avaliação de Impacto de
+            Avaliação de Impacto da
             <span className="block bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Políticas Sociais
+              Tarifa Social de Energia
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Análise baseada em dados sobre a implementação e impacto de programas sociais no Brasil
+            Análise econométrica rigorosa do impacto da política de subsídio energético para famílias de baixa renda no Brasil
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               size="lg" 
+              onClick={scrollToSection}
               className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Explorar Dados
@@ -38,6 +44,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
+              onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-transparent border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm"
             >
               Metodologia
@@ -47,21 +54,21 @@ const Hero = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <Users className="w-8 h-8 text-accent mb-3 mx-auto" />
-              <div className="text-4xl font-bold text-white mb-2">21,4M</div>
+              <Zap className="w-8 h-8 text-accent mb-3 mx-auto" />
+              <div className="text-4xl font-bold text-white mb-2">9,4M</div>
               <div className="text-white/80">Famílias Beneficiadas</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <TrendingDown className="w-8 h-8 text-success mb-3 mx-auto" />
-              <div className="text-4xl font-bold text-white mb-2">-36%</div>
-              <div className="text-white/80">Redução da Pobreza Extrema</div>
+              <div className="text-4xl font-bold text-white mb-2">-61%</div>
+              <div className="text-white/80">Redução da Inadimplência</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <BarChart3 className="w-8 h-8 text-warning mb-3 mx-auto" />
-              <div className="text-4xl font-bold text-white mb-2">0.518</div>
-              <div className="text-white/80">Índice de Gini (2023)</div>
+              <Lightbulb className="w-8 h-8 text-warning mb-3 mx-auto" />
+              <div className="text-4xl font-bold text-white mb-2">R$ 125</div>
+              <div className="text-white/80">Economia Mensal Média</div>
             </div>
           </div>
         </div>
