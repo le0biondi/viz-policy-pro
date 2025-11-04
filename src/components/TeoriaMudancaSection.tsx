@@ -46,15 +46,52 @@ const TeoriaMudancaSection = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
                 O ponto de partida da TSEE é o reconhecimento de que, para uma parcela significativa da população brasileira, 
-                o custo da energia elétrica é uma barreira substancial. Estudos mostram que "em países em desenvolvimento o Índice 
-                de Desenvolvimento Humano (IDH) tem correlação muito alta com o consumo de energia elétrica per capita".
+                o custo da energia elétrica é uma barreira substancial. A energia elétrica é fundamental para o desenvolvimento 
+                humano, com uma forte correlação entre o consumo per capita e o Índice de Desenvolvimento Humano (IDH) em diversas nações.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                No entanto, para famílias de baixa renda, a tarifa plena da energia elétrica pode comprometer de forma excessiva a 
+                Para famílias de baixa renda, a tarifa plena da energia elétrica pode comprometer de forma excessiva a 
                 renda familiar, levando à <strong className="text-warning">"pobreza energética"</strong>, definida como a situação 
                 em que uma família compromete mais de 10% de sua renda com os custos de acesso à energia. Essa situação de pobreza 
                 energética tem responsabilidade direta na manutenção e possivelmente no aumento da desigualdade social, alimentando 
                 a escassez e a exclusão social.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Visão Geral da Política (Moved and Adapted) */}
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle>Visão Geral da Política</CardTitle>
+            </CardHeader>
+            <CardContent className="prose prose-slate max-w-none dark:prose-invert">
+              <p className="text-muted-foreground leading-relaxed">
+                A Tarifa Social de Energia Elétrica (TSEE) é uma política pública estruturada para promover a inclusão e 
+                o bem-estar social, utilizando a determinação diferenciada de preços para um serviço essencial. Sua concepção 
+                reconhece o papel fundamental que a precificação de serviços públicos pode desempenhar na redistribuição de 
+                renda e na consecução de objetivos sociais.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Objetivos da Política Pública (Moved and Adapted) */}
+          <Card className="mb-8">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <TrendingUp className="w-6 h-6 text-success" /> {/* Changed icon to match the previous section's style for objectives */}
+                <CardTitle>Objetivos da Política Pública</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Nesse contexto, a TSEE se justifica pela perspectiva de utilizar os preços de bens e serviços regulados 
+                como um instrumento distributivo complementar. A lógica é que a intervenção pode ocorrer para manter 
+                o preço de bens essenciais, como a energia elétrica, em um nível acessível para segmentos vulneráveis.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                A energia elétrica, sendo um bem de consumo indispensável e um fator de dignidade, é um alvo primordial para 
+                tal intervenção. A política busca maximizar o bem-estar social e alcançar metas distributivas por meio da 
+                diferenciação tarifária, garantindo acesso e contribuindo para a redução de desigualdades.
               </p>
             </CardContent>
           </Card>
